@@ -1,0 +1,13 @@
+<div style="text-align: center;" class="container">
+  <h1>Angular</h1>
+  <br>
+  <label style="font-weight: bold; font-size: 20px;">Numero1</label><br>
+  <input type="number" [(ngModel)]="num1"><br>
+  <label style="font-weight: bold; font-size: 20px;">Numero2</label><br>
+  <input type="number" [(ngModel)]="num2">
+  <br>
+  <br>
+  <button (click)="sumar()">Sumar</button><button (click)="restar()">Restar</button>
+  <button (click)="multiplicar()">Multiplicar</button><button (click)="dividir()">Dividir</button><br>
+  <h1>{{resultado}}</h1>
+</div>
