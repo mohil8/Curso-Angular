@@ -1,0 +1,36 @@
+<div class="container">
+
+  <h1>Ejemplo de ngClass con select</h1><br>
+  <label for="">Color de Letra</label><br>
+  <select (change)="cambioColor()" [(ngModel)]="textoBack">
+    <option value="" disabled selected>Seleccionar Color</option>
+    <option value="rojo">Rojo</option>
+    <option value="azul">Azul</option>
+    <option value="verde">Verde</option>
+    <option value="amarillo">Amarillo</option>
+  </select>
+  <br><br>
+  <label for="">Tamaño de letra</label><br>
+  <select (change)="cambioLetra()">
+    <option disabled selected>Selecciona Tamaño de letra</option>
+    <option value="12px">12px</option>
+    <option value="16px">16px</option>
+    <option value="20px">20px</option>
+    <option value="24px">24px</option>
+  </select>
+  <br><br>
+  <label for="">Color de Fondo</label><br>
+  <select (change)="cambioFondo()">
+    <option value="" disabled selected>Seleccionar Color</option>
+    <option value="rojo">Rojo</option>
+    <option value="azul">Azul</option>
+    <option value="verde">Verde</option>
+    <option value="amarillo">Amarillo</option>
+  </select>
+
+<br><br>
+  <div class="textos">DESARROLLO DE APLICACIONES WEB</div>
+  <div class="textos">DESARROLLO DE APLICACIONES MULTIPLATAFORMA</div>
+  <div class="textos">ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS Y REDES</div>
+
+</div>
