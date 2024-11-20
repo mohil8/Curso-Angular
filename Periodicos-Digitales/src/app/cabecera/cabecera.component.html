@@ -1,0 +1,19 @@
+<div class="container">
+  <!--Fila 1-->
+  <div class="row">
+    <div class="col-lg-6">
+      <p>{{segundos}}</p>
+      <button (click)="cuentaAtras()" [disabled]="activarB">{{textoBoton}}</button>
+    </div>
+    <div class="col-lg-6">
+      <div [style.backgroundColor]="color" [style.font-size]="tamanioF">
+        <p>Desarrollo Web entorno cliente</p>
+      </div>
+    </div>
+  </div>
+<!--Fila 2-->
+  <div class="row">
+    <div class="col-lg-6"></div>
+    <div class="col-lg-6"></div>
+  </div>
+</div>
