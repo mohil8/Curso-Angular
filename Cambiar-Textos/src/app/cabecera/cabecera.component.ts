@@ -7,24 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CabeceraComponent {
 
-  textoBack:string='';
-
-cambioFondo() {
-
-  
-
-}
-cambioLetra() {
-
-
-}
-
-
-
-cambioColor() {
-
-
-}
+  textoBack: string = '';
+  letraSize: string = '';
+  fondoColor: string = '';
 
 
 
