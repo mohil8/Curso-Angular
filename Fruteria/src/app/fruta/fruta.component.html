@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+      <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>PRECIO</th>
+                <th>UNIDADES</th>
+                <th>IMAGEN</th>
+                <th>ACCIONES</th>
+
+              </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let f of frutas">
+                 <td>{{f.id}}</td>
+                 <td>{{f.nombre}}</td>
+                 <td>{{f.precio}}</td>
+                 <td>{{f.unidades}}</td>
+                 <td><img src="{{f.imagen}}" width="100" height="80" alt=""></td>
+
+                <td><button class="btn btn-info m-2" (click)="seleccionarProductos(f)">Modificar</button></td>
+                <td><button class="btn btn-danger m-2" (click)="eliminar(f.id)">Eliminar</button></td>
+
+               </tr>
+            </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6">
+      <form #f = "ngForm">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="text" class="form-control" id="id" name="id"
+          placeholder="Enter id" [(ngModel)] = "selectedProduct.id">
+
+        </div>
+        <div class="form-group">
+          <label for="nombre">NOMBRE</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter nombre" [(ngModel)] = "selectedProduct.nombre">
+
+        </div>
+        <div class="form-group">
+          <label for="precio">PRECIO</label>
+          <input type="number" class="form-control" id="precio" name="precio" placeholder="Enter precio"[(ngModel)] = "selectedProduct.precio">
+
+        </div>
+        <div class="form-group">
+          <label for="unidades">UNIDADES</label>
+          <input type="number" class="form-control" id="unidades" name="unidades" placeholder="Enter unidades"[(ngModel)] = "selectedProduct.unidades">
+
+        </div>
+        <div class="form-group">
+          <label for="imagen">IMAGEN</label>
+          <input type="text" class="form-control" id="imagen" name="imagen" placeholder="Enter imagen"[(ngModel)] = "selectedProduct.imagen">
+
+        </div>
+      </form>
+        <input type="button" class="btn btn-success m-2"
+        (click)="crearProducto(f)" value="Crear Productos">
+        <input type="button" class="btn btn-primary m-2" (click)="actualizarProducto(f)" value="Actualizar Productos">
+        <input type="button" class="btn btn-primary m-2" (click)="resetearFormulario()" value="Resetear Formulario">
+        <p>{{info}}</p>
+      </div>
+    </div>
+  </div>
+

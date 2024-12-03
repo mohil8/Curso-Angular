@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="text-center mb-5 bg-primary" >Conversor de Monedas</h1>
+  <label for="idEuros">Teclea Euros</label><br>
+  <input type="number" [(ngModel)]="euros" (ngModelChange)="convertirMoneda('euros')" /><br>
+
+  <label for="idDolares">Teclea Dólares</label><br>
+  <input type="number" [(ngModel)]="dolares" (ngModelChange)="convertirMoneda('dolares')" /><br>
+
+  <label for="idYenes">Teclea Yenes</label><br>
+  <input type="number" [(ngModel)]="yenes" (ngModelChange)="convertirMoneda('yenes')" /><br>
+</div>
+

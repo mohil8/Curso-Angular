@@ -1,0 +1,54 @@
+<!--Formulario-->
+
+<div class="row">
+  <h1 class="text-center my-4">Chat</h1>
+  <div class="col-3"></div>
+  <div class="col-6">
+    <div class="text-center">
+      <form #f="ngForm">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Introduce tu nombre..." [(ngModel)]="selectMensaje.usuario"><br>
+        <label for="mensaje">Mensaje:</label>
+        <input type="text" id="mensaje" name="mensaje" placeholder="Introduce el mensaje..." [(ngModel)]="selectMensaje.mensaje">
+        <br>
+        <br>
+        <button class="btn btn-primary m-2" (click)="sumarMensaje(f)">Añadir Mensaje</button>
+        <button class="btn btn-success m-2" (click)="leer()">Leer Mensaje</button>
+        <br>
+        <button class="btn btn-danger m-2" (click)="borrar()">Eliminar Todo</button>
+
+      </form>
+    </div>
+  </div>
+  <div class="col-3"></div>
+</div>
+
+<!--Tabla de mensajes-->
+
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-8">
+   <div class="text-center">
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>FECHA</th>
+        <th>Usuario</th>
+        <th>Mensaje</th>
+      </tr>
+      <tr *ngFor="let msg of Mensajes">
+        <td>{{msg.id}}</td>
+        <td>{{msg.fecha}}</td>
+        <td>{{msg.usuario}}</td>
+        <td>{{msg.mensaje}}</td>
+        <td><button class="btn btn-danger m-2" (click)="eliminarM(msg.id)">Eliminar</button></td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <h2>{{info}}</h2>
+   </div>
+  </div>
+  <div class="col-1"></div>
+</div>
+

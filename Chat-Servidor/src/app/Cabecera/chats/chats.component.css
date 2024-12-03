@@ -1,0 +1,11 @@
+input{
+  width: 500px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+table{
+  width: 80%;
+  margin-inline: 20px;
+  margin-top: 50px;
+}

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="text-center">
+        <h1>Galeria</h1>
+        <img [src]="imagen" alt="" class="m-4" [ngStyle]="{width:ancho,height:alto}"><br>
+        <button (click)="anterior()" class="btn btn-primary mx-3">Anterior</button>
+        <button (click)="siguiente()" class="btn btn-primary mx-3">Siguiente</button>
+        <button (click)="aumentar()" class="btn btn-primary mx-3">Aumentar</button>
+        <button (click)="disminuir()" class="btn btn-primary mx-3">Disminuir</button>
+        <button (click)="random()" class="btn btn-primary mx-3">{{nombreBoton}}</button>
+      </div>
+
+    </div>
+  </div>
+</div>
