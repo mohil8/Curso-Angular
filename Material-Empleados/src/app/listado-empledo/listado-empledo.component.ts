@@ -13,7 +13,7 @@ import { ServicioEmpleado } from '../Servicio/servicio-empleado.service';
   templateUrl: './listado-empledo.component.html',
   styleUrls: ['./listado-empledo.component.css']
 })
-export class ListadoEmpledoComponent implements OnInit {
+export class ListadoEmpledoComponent implements OnInit,AfterViewInit {
 
 
 modificarEmpleado(_t98: any) {
@@ -23,21 +23,34 @@ eliminarEmpleado(arg0: any) {
 
 }
 
-applyFilter($event: KeyboardEvent) {
+applyFilter(event: KeyboardEvent) {
 
+  const filtro=(event.target as HTMLInputElement).value;
+  this.dataSource.filter=filtro.trim().toLowerCase();
+
+  if(this.dataSource.paginator){
+    this.dataSource.paginator.firstPage();
+  }
 
 }
 
 
-  columnas: string[] = ['id', 'nombre', 'direccion', 'cargo' , 'edad' , 'imagen','borrar', 'modificar'];
+  columnas: string[] = ['id', 'nombre', 'direccion', 'cargo' , 'edad' , 'imagen','eliminar', 'modificar'];
   datos: Empleado[]=[];
-  dataSource!: MatTableDataSource<Empleado>;
+  borrarLink:string='https://cdn-icons-png.flaticon.com/128/3096/3096687.png'
+  dataSource= new MatTableDataSource<Empleado>;
   empleado!:Empleado;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   // public dialog: MatDialog,
-  constructor(private httpCliente: ServicioEmpleado){  }
+  constructor(private httpCliente: ServicioEmpleado){
+    this.httpCliente.leerEmpleados().subscribe((x)=>{this.dataSource.data=x})
+  }
+  ngAfterViewInit(): void {
+   this.dataSource.paginator=this.paginator;
+   this.dataSource.sort=this.sort;
+  }
 
   ngOnInit(): void {
     this.httpCliente.leerEmpleados().subscribe((x)=>{this.dataSource.data=x})

@@ -11,7 +11,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSortModule} from '@angular/material/sort'
 import { MatPaginatorModule } from '@angular/material/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    MatPaginatorModule
+    MatPaginatorModule,MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
