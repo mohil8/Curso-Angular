@@ -3,22 +3,12 @@
   <div mat-dialog-content>
     <div class="contenedor">
 
-
-      <mat-form-field>
-        <input
-          matInput
-          [(ngModel)]="fruta.id"
-          type="text"
-          placeholder="inserta  matricula"
-        />
-      </mat-form-field>
-
       <mat-form-field>
         <input
           matInput
           [(ngModel)]="fruta.nombre"
           type="text"
-          placeholder="inserta color"
+          placeholder="Nombre..."
         />
       </mat-form-field>
       <mat-form-field>
@@ -26,7 +16,7 @@
           matInput
           [(ngModel)]="fruta.precio"
           type="text"
-          placeholder="inserta marca"
+          placeholder="Precio..."
         />
       </mat-form-field>
       <mat-form-field>
@@ -34,15 +24,15 @@
           matInput
           [(ngModel)]="fruta.cantidad"
           type="text"
-          placeholder="inserta Km"
+          placeholder="Cantidad..."
         />
       </mat-form-field>
 
     </div>
   </div>
   <div mat-dialog-actions>
-    <button mat-button (click)="Cancelar()">Cancelar</button>
-    <button mat-button [mat-dialog-close]="fruta" cdkFocusInitial>
+    <button mat-button (click)="Cancelar()" class="cancelar">Cancelar</button>
+    <button mat-button [mat-dialog-close]="fruta" cdkFocusInitial class="confirmar">
       Confirmar
     </button>
   </div>

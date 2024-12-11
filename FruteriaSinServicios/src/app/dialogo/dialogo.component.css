@@ -1,0 +1,14 @@
+.cancelar{
+  padding: 7px;
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  margin-right: 20px;
+}
+
+.confirmar{
+  padding: 7px;
+  background-color: rgb(31, 147, 220);
+  color: white;
+  font-weight: bold;
+}
