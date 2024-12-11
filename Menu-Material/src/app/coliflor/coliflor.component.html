@@ -1,1 +1,17 @@
-<p>coliflor works!</p>
+<h1>Coliflor</h1>
+
+<div style="margin: 10px;">
+  <h3>Conversor de números a texto(ESP/ENG)</h3>
+
+<label for="">Teclea un número entre el 1 y el 10</label>
+<input type="number" [(ngModel)]="numero" (ngModelChange)="EventoTraducir()"   >
+
+<h1>En español: {{resultadoE}}</h1>
+<br>
+<h1>En ingles: {{resultadoI}}</h1>
+<br>
+<h1>{{error}}</h1>
+</div>
+
+
+

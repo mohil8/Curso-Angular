@@ -1,1 +1,13 @@
-<p>repollo works!</p>
+<h1>ROMANESKU</h1>
+
+<br>
+
+<h1>Contador de apariciones</h1>
+<br>
+
+<label for="">Introduce un número(1-20):</label>
+<input type="number" [(ngModel)]="numero" (ngModelChange)="Evento()">
+<button (click)="generarNumeros">Generar vector</button>
+
+
+<p>{{texto}}</p>

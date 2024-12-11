@@ -7,4 +7,28 @@ import { Component } from '@angular/core';
 })
 export class RepolloComponent {
 
+
+
+  numero: any;
+
+  texto: any;
+
+  vector:number[]=[100];
+
+  generarNumeros(){
+
+    for(let i=0;i<100;i++){
+      let random=Math.floor(Math.random()*20);
+      this.vector.push(random);
+    }
+  }
+
+  Evento() {
+
+
+
+    }
+
+
+
 }

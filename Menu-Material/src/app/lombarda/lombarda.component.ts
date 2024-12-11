@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class LombardaComponent {
 
+nombreFondo: any;
+letras:string='012345678ABCDEF';
+
+numero:number=this.letras.length;
+
+renaudar() {
+
+
+
+}
+
+parar() {
+
+
+
+}
+
+
 }
