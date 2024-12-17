@@ -1,0 +1,35 @@
+<h4>Añadir empleado</h4> <br>
+<form #f="ngForm" action="">
+  <label for="id">ID:</label><br>
+  <input type="number" id="id" name="id" [(ngModel)]="selectedEmpleados.id"><br>
+  <label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre" [(ngModel)]="selectedEmpleados.nombre"><br>
+  <label for="edad">Edad:</label><br>
+  <input type="number" id="edad" name="edad" [(ngModel)]="selectedEmpleados.edad"><br>
+  <label for="cargo">Cargo:</label><br>
+  <input type="text" id="cargo" name="cargo" [(ngModel)]="selectedEmpleados.cargo"><br>
+  <label for="salario">Salario:</label><br>
+  <input type="number" id="salario" name="salario" [(ngModel)]="selectedEmpleados.salario"><br>
+  <br><br>
+  <button type="submit" (click)="addEmpleados(f)">Añadir Empleado</button>
+</form>
+
+<br><br>
+<table border="1">
+  <tr>
+    <th>Id:</th>
+    <th>Nombre:</th>
+    <th>Edad:</th>
+    <th>Cargo:</th>
+    <th>Salario:</th>
+  </tr>
+  <tr *ngFor="let emp of empleados">
+    <td>{{emp.id}}</td>
+    <td>{{emp.nombre}}</td>
+    <td>{{emp.edad}}</td>
+    <td>{{emp.cargo}}</td>
+    <td>{{emp.salario}}</td>
+    <button type="submit" name="borrar" (click)="eliminarEmp(emp)">Borrar</button>
+    <button type="submit" name="modificar" (click)="actualizar(emp)">Modificar</button>
+  </tr>
+</table>

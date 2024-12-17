@@ -16,13 +16,6 @@ import { ServicioEmpleado } from '../Servicio/servicio-empleado.service';
 export class ListadoEmpledoComponent implements OnInit,AfterViewInit {
 
 
-modificarEmpleado(_t98: any) {
-
-}
-eliminarEmpleado(arg0: any) {
-
-}
-
 applyFilter(event: KeyboardEvent) {
 
   const filtro=(event.target as HTMLInputElement).value;

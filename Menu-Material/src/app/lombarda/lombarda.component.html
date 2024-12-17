@@ -1,7 +1,6 @@
 <p>lombarda</p>
 
-<div>{{nombreFondo}}</div>
-<button (click)="parar()">Parar</button>
+<div [ngStyle]="{background:fondo,width:ancho,height:alto}">{{nombre}}</div>
 <button (click)="renaudar()">Renaudar</button>
-
+<button (click)="parar()">Parar</button>
 

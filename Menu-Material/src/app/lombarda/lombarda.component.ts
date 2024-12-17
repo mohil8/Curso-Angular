@@ -7,22 +7,29 @@ import { Component } from '@angular/core';
 })
 export class LombardaComponent {
 
-nombreFondo: any;
-letras:string='012345678ABCDEF';
+  letras: string = '012345678ABCDEF';
+  fondo: string = '';
+  nombre: string = '';
+  alto: string = '100px';
+  ancho: string = '100px';
+  temporizador: any;
 
-numero:number=this.letras.length;
+  renaudar() {
+    this.temporizador = setInterval(() => {
+      this.fondo = '#';
+      this.nombre = 'Background Color:';
+      let array = '';
+      for (let i = 0; i < 6; i++) {
+        let random = Math.floor(Math.random() * 14);
+        array += this.letras.charAt(random);
+      }
+      this.fondo = '#' + array;
+      this.nombre = this.nombre + this.fondo;
+    }, 2000);
+  }
 
-renaudar() {
-
-
-
+  parar() {
+    clearInterval(this.temporizador);
+  }
 }
 
-parar() {
-
-
-
-}
-
-
-}
