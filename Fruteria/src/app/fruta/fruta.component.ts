@@ -43,10 +43,9 @@ actualizarProducto(form: { value: Fruta; }) {
       if(this.selectedProduct && this.selectedProduct.id){
 
         this.httpCliente.updateProduct(form.value).
-      subscribe((producto:Fruta)=>{this.prod = producto})
+        subscribe((producto:Fruta)=>{this.prod = producto})
         this.info="Fruta modificada: "+form.value.nombre;
-
-    }
+      }
     this.resetearFormulario();
     this.httpCliente.refrescar;
 
@@ -68,6 +67,7 @@ eliminar(id:string) {
   this.httpCliente.deleteProduct(id).subscribe(()=>{
 	this.info="Fruta eliminada: "+id;
   this.httpCliente.leerProductos().subscribe(x=>this.frutas=x)
+    
 
   });
 }

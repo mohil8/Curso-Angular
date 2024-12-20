@@ -33,7 +33,7 @@ export class CrudRandomNumbersComponent  implements AfterViewInit {
 
 
   refreshTable() {
-    this.datasource = new MatTableDataSource(this.servicioR.retornarLista());
+    this.datasource = new MatTableDataSource(this.servicioR.());
     this.datasource.paginator = this.paginator;
     this.datasource.sort = this.sort;
   }

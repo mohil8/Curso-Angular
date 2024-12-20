@@ -14,6 +14,12 @@ import { ServicioEmpleado } from '../Servicio/servicio-empleado.service';
   styleUrls: ['./listado-empledo.component.css']
 })
 export class ListadoEmpledoComponent implements OnInit,AfterViewInit {
+eliminarEmpleado(arg0: any) {
+throw new Error('Method not implemented.');
+}
+modificarEmpleado(_t107: any) {
+throw new Error('Method not implemented.');
+}
 
 
 applyFilter(event: KeyboardEvent) {

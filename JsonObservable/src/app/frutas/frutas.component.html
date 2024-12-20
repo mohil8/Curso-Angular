@@ -1,0 +1,26 @@
+<h4>Añadir Fruta</h4>
+<form #f="ngForm" action="">
+  id: <input type="number" name="id" [(ngModel)]="selectedProduct.id">
+  Nombre: <input type="text" name="nombre" [(ngModel)]="selectedProduct.nombre" >
+  Cantidad: <input type="number" name="cantidad" [(ngModel)]="selectedProduct.cantidad" >
+  Nombre: <input type="number" name="precio" [(ngModel)]="selectedProduct.precio" >
+  <button type="submit" name="crear" (click)="addFrutas(f)">Crear Fruta</button>
+</form>
+<br><br>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>NOMBRE</th>
+    <th>CANTIDAD</th>
+    <th>PRECIO</th>
+  </tr>
+  <tr *ngFor="let fruta of frutas">
+    <td>{{fruta.id}}</td>
+    <td>{{fruta.nombre}}</td>
+    <td>{{fruta.cantidad}}</td>
+    <td>{{fruta.precio}}</td>
+    <button type="submit" name="borrar" (click)="borrar(fruta)">Borrar</button>
+  </tr>
+</table>
+
+
